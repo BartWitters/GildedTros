@@ -1,7 +1,14 @@
 ﻿namespace GildedTros.App.TypesOfGoods;
 
+/// <summary>
+/// Represents a Backstage Pass item in the Gilded Tros inventory.
+/// </summary>
 public class BackstagePass : IItemUpdater
 {
+    /// <summary>
+    /// Update the Backstage Pass item. The quality of a Backstage Pass increases as the sell date approaches.
+    /// </summary>
+    /// <param name="item">The BackstagePass item to be updated</param>
     public void UpdateItem(Item item)
     {
         item.SellIn--;

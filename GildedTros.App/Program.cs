@@ -3,8 +3,15 @@ using System.Collections.Generic;
 
 namespace GildedTros.App;
 
+/// <summary>
+/// Program is the entry point of the Gilded Tros simulation.
+/// </summary>
 internal class Program
 {
+    /// <summary>
+    /// Main method is the entry point of the program.
+    /// </summary>
+    /// <param name="args">The given arguments if there are</param>
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the Gilded Tros simulation!");
@@ -30,6 +37,11 @@ internal class Program
         ShowResult(inventory, items, numberOfDays);
     }
 
+    /// <summary>
+    /// GetNumberOfDays gets the number of days to be used for the algorithm.
+    /// </summary>
+    /// <param name="args">The given arguments if there are</param>
+    /// <returns>The number days to be used for the algorithm</returns>
     private static int GetNumberOfDays(string[] args)
     {
         var inputNumberOfDays = (args.Length >= 1) ? args[0] : AskInput("Please enter the number of days:");
@@ -45,12 +57,24 @@ internal class Program
         return numberOfDays;
     }
 
+    /// <summary>
+    /// Ask the user for input in the console app.
+    /// </summary>
+    /// <param name="message">The message to be shown in the console app</param>
+    /// <returns>The input of the user</returns>
+    /// <exception cref="InvalidOperationException">Exception if it failed to read</exception>
     private static string AskInput(string message)
     {
         Console.WriteLine(message);
         return Console.ReadLine() ?? throw new InvalidOperationException("Failed to read user input.");
     }
 
+    /// <summary>
+    /// This method shows the result of the simulation in the console app.
+    /// </summary>
+    /// <param name="inventory">The inventory</param>
+    /// <param name="items">The items</param>
+    /// <param name="numberOfDays">The number of days</param>
     private static void ShowResult(GildedTrosInventory inventory, IList<Item> items, int numberOfDays)
     {
         for (var i = 0; i < numberOfDays; i++)
