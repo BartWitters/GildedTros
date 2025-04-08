@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedTros.App", "GildedTros.App\GildedTros.App.csproj", "{37C9D9B5-867E-4905-926C-19ED64D89B89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D65BA85D-8114-434B-9EA4-DA2F7F9EB7D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{37C9D9B5-867E-4905-926C-19ED64D89B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37C9D9B5-867E-4905-926C-19ED64D89B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37C9D9B5-867E-4905-926C-19ED64D89B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65BA85D-8114-434B-9EA4-DA2F7F9EB7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65BA85D-8114-434B-9EA4-DA2F7F9EB7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65BA85D-8114-434B-9EA4-DA2F7F9EB7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65BA85D-8114-434B-9EA4-DA2F7F9EB7D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

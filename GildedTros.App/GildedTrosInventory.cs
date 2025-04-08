@@ -2,10 +2,10 @@
 
 namespace GildedTros.App
 {
-    public class GildedTros
+    public class GildedTrosInventory
     {
         IList<Item> Items;
-        public GildedTros(IList<Item> Items)
+        public GildedTrosInventory(IList<Item> Items)
         {
             this.Items = Items;
         }
