@@ -9,6 +9,8 @@ internal class Program
     {
         Console.WriteLine("Welcome to the Gilded Tros simulation!");
 
+        var numberOfDays = GetNumberOfDays(args);
+
         IList<Item> items = new List<Item>{
             new() {Name = "Ring of Cleansening Code", SellIn = 10, Quality = 20},
             new() {Name = "Good Wine", SellIn = 2, Quality = 0},
@@ -25,8 +27,33 @@ internal class Program
 
         var inventory = new GildedTrosInventory(items);
 
+        ShowResult(inventory, items, numberOfDays);
+    }
 
-        for (var i = 0; i < 31; i++)
+    private static int GetNumberOfDays(string[] args)
+    {
+        var inputNumberOfDays = (args.Length >= 1) ? args[0] : AskInput("Please enter the number of days:");
+
+        int numberOfDays;
+        while (!(int.TryParse(inputNumberOfDays, out numberOfDays) && numberOfDays > 0))
+        {
+            Console.WriteLine("The input \"" + inputNumberOfDays +
+                              "\" is not valid, it should be an integer greater than 0! Please enter a correct number:");
+            inputNumberOfDays = Console.ReadLine();
+        }
+
+        return numberOfDays;
+    }
+
+    private static string AskInput(string message)
+    {
+        Console.WriteLine(message);
+        return Console.ReadLine() ?? throw new InvalidOperationException("Failed to read user input.");
+    }
+
+    private static void ShowResult(GildedTrosInventory inventory, IList<Item> items, int numberOfDays)
+    {
+        for (var i = 0; i < numberOfDays; i++)
         {
             Console.WriteLine("\n-------- Day " + i + " --------");
             Console.WriteLine($"|{"Name",-35}|{"SellIn",8}|{"Quality",8}|");

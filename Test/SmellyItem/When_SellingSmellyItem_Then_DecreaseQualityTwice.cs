@@ -20,6 +20,6 @@ public class When_SellingSmellyItem_Then_DecreaseQualityTwice
         // Assert
         Assert.Equal("Long Methods", items[0].Name);
         Assert.Equal(1, items[0].SellIn);
-        Assert.Equal(12, items[0].Quality); // Original code is not correct, test succeeds when value is 14
+        Assert.Equal(12, items[0].Quality);
     }
 }

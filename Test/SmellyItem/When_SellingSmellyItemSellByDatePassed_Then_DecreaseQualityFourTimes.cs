@@ -20,6 +20,6 @@ public class When_SellingSmellyitemsellByDatePassed_Then_DecreaseQualityFourTime
         // Assert
         Assert.Equal("Long Methods", items[0].Name);
         Assert.Equal(-1, items[0].SellIn);
-        Assert.Equal(6, items[0].Quality); // Original code is not correct, test succeeds when value is 11
+        Assert.Equal(6, items[0].Quality);
     }
 }
