@@ -14,7 +14,7 @@ public class When_SellingNormalGoodSellByDatePassed_Then_DecreaseQualityTwice
         // Act
         for (var day = 0; day < 12; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

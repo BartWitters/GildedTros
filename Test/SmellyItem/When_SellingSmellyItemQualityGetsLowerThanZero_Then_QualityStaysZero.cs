@@ -14,7 +14,7 @@ public class When_SellingSmellyItemQualityGetsLowerThanZero_Then_QualityStaysZer
         // Act
         for (var day = 0; day < 10; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

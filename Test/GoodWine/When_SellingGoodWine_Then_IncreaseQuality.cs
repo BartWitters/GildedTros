@@ -14,7 +14,7 @@ public class When_SellingGoodWine_ThenIncreaseQuality
         // Act
         for (var day = 0; day < 2; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

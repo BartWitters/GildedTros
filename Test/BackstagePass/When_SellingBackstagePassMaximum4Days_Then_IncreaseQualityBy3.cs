@@ -14,7 +14,7 @@ public class When_SellingBackstagePassMaximum4Days_Then_IncreaseQualityBy3
         // Act
         for (var day = 0; day < 11; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

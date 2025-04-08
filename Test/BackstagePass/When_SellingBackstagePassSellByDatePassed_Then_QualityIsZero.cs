@@ -14,7 +14,7 @@ public class When_SellingBackstagePassSellByDatePassed_Then_QualityIsZero
         // Act
         for (var day = 0; day < 16; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

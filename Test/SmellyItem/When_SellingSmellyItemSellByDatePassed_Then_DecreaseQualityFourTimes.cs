@@ -14,7 +14,7 @@ public class When_SellingSmellyitemsellByDatePassed_Then_DecreaseQualityFourTime
         // Act
         for (var day = 0; day < 4; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

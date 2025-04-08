@@ -14,7 +14,7 @@ public class When_SellingLegendaryItem_Then_QualityIsUnmodified
         // Act
         for (var day = 0; day < 6; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert

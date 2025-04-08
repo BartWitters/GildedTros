@@ -14,7 +14,7 @@ public class When_SellingBackstagePassBetween9And5Days_Then_IncreaseQualityBy2
         // Act
         for (var day = 0; day < 6; day++)
         {
-            gildedTrosInventory.UpdateQuality();
+            gildedTrosInventory.UpdateItems();
         }
 
         // Assert
