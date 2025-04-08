@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GildedTros.App
 {
-    class Program
+    internal class Program
     {
         public static void Main(string[] args)
         {
@@ -24,19 +24,21 @@ namespace GildedTros.App
                 new Item {Name = "Ugly Variable Names", SellIn = 3, Quality = 6}
             };
 
-            var app = new GildedTrosInventory(Items);
+            var inventory = new GildedTrosInventory(Items);
 
 
             for (var i = 0; i < 31; i++)
             {
-                Console.WriteLine("-------- day " + i + " --------");
-                Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < Items.Count; j++)
+                Console.WriteLine("\n-------- Day " + i + " --------");
+                Console.WriteLine($"|{"Name",-35}|{"SellIn",8}|{"Quality",8}|");
+                Console.WriteLine("|-----------------------------------------------------|");
+
+                foreach (var item in Items)
                 {
-                    System.Console.WriteLine(Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality);
+                    Console.WriteLine($"|{item.Name,-35}|{item.SellIn,8}|{item.Quality,8}|");
                 }
-                Console.WriteLine("");
-                app.UpdateQuality();
+
+                inventory.UpdateQuality();
             }
         }
     }
